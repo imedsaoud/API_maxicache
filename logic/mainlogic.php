@@ -6,8 +6,6 @@ require_once "functionlogic.php";
 
 $device_type = get_device(); // Type de device
 
-
-
 if ($device_type === 'desktop') {
   $right_url_size = $row['desktop_size'];
 }elseif($device_type === 'mobile'){

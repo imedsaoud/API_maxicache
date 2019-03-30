@@ -21,7 +21,7 @@ Proxy_cache also give you the image adapted for your device (Desktop | Mobile | 
 
 3- How it works ?
 
-- Go to your brower and copy after the 'Host url'  /// 'source imageurl'
+- Go to your brower and copy after the 'Host url'  /// 'source image url'
 Ex: localhost:8080/html/index.php///user.oc-static.com/files/6001_7000/6410.jpg
 
 ---

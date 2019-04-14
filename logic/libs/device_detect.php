@@ -19,6 +19,7 @@
  * Original author: Victor Stanciu <vic.stanciu@gmail.com>
  *
  * @version 2.8.33
+ *
  */
 class Mobile_Detect
 {
@@ -1472,3 +1473,7 @@ class Mobile_Detect
         return self::MOBILE_GRADE_C;
     }
 }
+
+/*
+
+*/

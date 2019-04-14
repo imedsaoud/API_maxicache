@@ -16,7 +16,7 @@ Proxy_cache also give you the image adapted for your device (Desktop | Mobile | 
 
 2- Run
 
-- cd in the script directory
+- cd in the html directory
 - ```php -S localhost:8080```
 
 3- How it works ?

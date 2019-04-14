@@ -3,22 +3,23 @@ require_once "../data/data.php";
 require_once "functionlogic.php";
 
 
+$uri = $_SERVER['REQUEST_URI'] ?? 'NOT NULL';
+$sourceUrl = getSourceUrl($uri);
+$deviceType = getDevice(); // Device De l'utilisateur
 
-$source_url = get_source_url(); // Url de la source
-$device_type = get_device(); // Device De l'utilisateur
-$urls = get_urls($pdo, $source_url); // Retourne un tableau avec les 3 Chemin si l'url_source est présente en db
+$urls = getUrls($pdo, $sourceUrl); // Retourne un tableau avec les 3 Chemin si l'url_source est présente en db
 
 
 
 if($urls) {
-    $right_url = "../images/" .  right_size_name_image($urls);
-    return_right_img($right_url);
+    $rightUrl = "../images/" .  getRightImageName($urls);
+    returnImg($rightUrl); // On affiche l'image à la bonne taille
 } else {
-    save_img_in_serv($source_url , $device_type); // Save l'image en local
-    $desk_structure = $device_type . basename($source_url);
-    AddUrl($pdo,$desk_structure, $source_url ); // !!!!!! Rajouter 4 parametres quand la fonction de resize sera terminer | On enregistre le meme chemin pour le moment !!!!!!!!!!!!!!
-    $right_url = "../images/" . right_size_name_image(get_urls($pdo,$source_url));
-    return_right_img($right_url);
+    dirImgSave($sourceUrl , $deviceType); // Save l'image dans le serv
+    $Urlstructure = $deviceType . basename($sourceUrl); // On ajoutera ce chemin 3 fois en attendant la fonction avec les 3 variables contenant les 3 chemins
+    AddUrls($pdo,$Urlstructure, $sourceUrl ); // !!!!!! Rajouter les parametres quand la fonction de resize sera terminer | On enregistre le meme chemin pour le moment !!!!!!!!!!!!!!
+    $rightUrl = "../images/" . getRightImageName(getUrls($pdo,$sourceUrl));
+    returnImg($rightUrl);
 }
 
 

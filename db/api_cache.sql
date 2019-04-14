@@ -18,4 +18,4 @@ CREATE TABLE `images` (
  - puis tester avec 'user.oc-static.com/filesf/60dsfsd01_7000/64f%6010.jpg'
  ex: localhost:8080/index.php///user.oc-static.com/filesf/60dsfsd01_7000/64f%6010.jpg
 */
-INSERT INTO images (original_size,desktop-size,mobile_size,tablet_size) VALUES ("user.oc-static.com/filesf/60dsfsd01_7000/64f%6010.jpg","desk.jpg","mobile.jpg","tablet.jpg");
+INSERT INTO images (original_size,desktop_size,mobile_size,tablet_size) VALUES ("user.oc-static.com/filesf/60dsfsd01_7000/test.jpg","desk.jpg","mobile.jpg","tablet.jpg");

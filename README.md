@@ -11,7 +11,7 @@ Proxy_cache also give you the image adapted for your device (Desktop | Mobile | 
 
 1- Create Db
 
-- Launch mysql  :  `mysql -u root -p` 
+- Connect to mysql  :  `mysql -u root -p` 
 - Copy the mysql file in your sql
 
 2- Run
